@@ -1,70 +1,9 @@
 'use client';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { useState, useRef, useEffect } from "react";
-import Hero from '../components/Hero';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const filters = [
-  "All",
-  "Stress management",
-  "Relationship",
-  "Habits",
-  "Worries",
-  "Leadership",
-  "Health",
-  "Mindfulness",
-  "Self-love",
-  "Sleep",
-];
-
-const liveCourse = {
-  title: "Inner Child Work",
-  description:
-    "Do you find yourself in an inner conflict over and over again? Understand what is it to become aware of your feelings and emotions, and become a more adult and res...",
-  author: "Sophie Homeyer",
-  imageAlt:
-    "Black and white photo of a young woman sitting on a bench looking at a man passing by in a street setting",
-};
-
-const mediaList = [
-  {
-    duration: "1:40",
-    title: "How to be mindful to your thoughts and analyse them better",
-    author: "Jana Richelsagen",
-    imageAlt:
-      "Smiling woman sitting at a desk speaking into a microphone with a cozy home background and green plants",
-  },
-  {
-    duration: "2:17",
-    title: "How can I love myself more?",
-    author: "Jana Richelsagen",
-    imageAlt:
-      "Black and white close-up photo of a smiling man in his 20s with bright hair and light background",
-  },
-  {
-    duration: "10:02",
-    title: "Become emotionally bulletproof",
-    author: "Jana Richelsagen",
-    imageAlt:
-      "Young woman with blonde hair looking directly to the camera seated on a couch with a young man next to her and soft natural light",
-  },
-];
-
-const expert = {
-  name: "Kristina Melzer",
-  role: "Therapist",
-  languages: "German, English",
-  description:
-    "Kristina helps you with an integrative approach in coping with depressive moods, (social) anxieties, exhaustion syndromes and stress management as well as in working out resources and strengthening your self-esteem. Kristina is also the right contact person for you in case of partnership or family problems. If you are currently in a crisis, Kristina is ther...",
-  tags: ["Stress management", "Relationship", "Habits"],
-  imageAlt:
-    "Portrait photo of Kristina Melzer, professional female therapist with curly shoulder-length brown hair and warm smile, in a studio with soft lighting",
-};
-
 export default function Home() {
-  const [selectedFilter, setSelectedFilter] = useState("All");
-
   return (
     <main className="bg-white text-black font-now-thin">
       {/* Hero Section */}
